@@ -1,0 +1,1 @@
+web: java -jar target/personalportfolio1.2.jar
