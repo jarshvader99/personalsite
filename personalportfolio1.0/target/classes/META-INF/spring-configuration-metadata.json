@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "gmail",
+      "type": "com.jshdevco.portfolio.GmailConfiguration",
+      "sourceType": "com.jshdevco.portfolio.GmailConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "gmail.password",
+      "type": "java.lang.String",
+      "sourceType": "com.jshdevco.portfolio.GmailConfiguration"
+    },
+    {
+      "name": "gmail.username",
+      "type": "java.lang.String",
+      "sourceType": "com.jshdevco.portfolio.GmailConfiguration"
+    }
+  ],
+  "hints": []
+}
