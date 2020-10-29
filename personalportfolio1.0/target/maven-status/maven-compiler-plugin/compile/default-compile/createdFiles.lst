@@ -1,4 +1,5 @@
 com\jshdevco\portfolio\GmailConfiguration.class
+com\jshdevco\portfolio\home\Result.class
 com\jshdevco\portfolio\home\HomeController.class
 com\jshdevco\portfolio\contact\ContactForm.class
 com\jshdevco\portfolio\contact\ContactEmailService.class
@@ -6,3 +7,4 @@ com\jshdevco\portfolio\contact\ContactController.class
 META-INF\spring-configuration-metadata.json
 com\jshdevco\portfolio\Application.class
 com\jshdevco\portfolio\contact\ContactEmailService$1.class
+com\jshdevco\portfolio\home\Popular.class
