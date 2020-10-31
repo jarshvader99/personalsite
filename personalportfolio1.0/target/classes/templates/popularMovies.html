@@ -22,13 +22,15 @@
 	</nav>
 	
 <div class="container-fluid">
-    <h1 class="mt-4"></h1>
+    <h1 class="mt-4">
+    	<input type="text" id="search-bar" onkeyup="searchBar()" placeholder="Search for a title...">
+    </h1>
     <div class="row">
         <div class="col-md-12 col-lg-6 center">
-        	<div th:each="result : ${results}">
-	            <div class="card mb-6" style="margin-bottom:25px;">
-	                <div class="card-header">
-	                	<span th:text="${result.title}">1</span>
+       		<div th:each="result : ${results}">
+			  	<div class="card mb-6" style="margin-bottom:25px;">
+	                <div class="card-header movie-titles">
+	                	<span th:id="${result.id}" th:text="${result.title}">1</span>
 	                </div>
 	                <div class="card-body col-xl-12">
 	                	<div><img th:src="'https://image.tmdb.org/t/p/w500'+ ${result.posterPath}" style="width:100%;"/></div>	
@@ -63,4 +65,27 @@
     </div>
 </div>
 
+<script th:inline="javascript">
+
+var movie = /*[[${results}]]*/ 'default';
+
+function searchBar() {
+	
+    var input = document.getElementById('search-bar').value 
+    input=input.toLowerCase(); 
+    var x = document.getElementsByClassName('movie-titles'); 
+      
+    for (i = 0; i < x.length; i++) {  
+        if (!x[i].innerHTML.toLowerCase().includes(input)) { 
+            x[i].style.display="none";
+            x[i].parentElement.style.display = "none";
+        } 
+        else { 
+            x[i].style.display="";
+            x[i].parentElement.style.display = "";
+        } 
+    } 
+}
+
+</script>
 
